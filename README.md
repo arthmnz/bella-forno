@@ -18,7 +18,6 @@ Site de uma pizzaria familiar fictícia, desenvolvido como trabalho de faculdade
 - **Cardápio com filtro por categoria** (Todas, Tradicionais, Especiais, Doces, Bebidas e Sobremesas) e **busca por nome** que ignora maiúsculas e acentos. Filtro e busca funcionam combinados, e uma mensagem aparece quando nada é encontrado.
 - **Monte sua pizza**: o cliente escolhe tamanho, sabores, borda, adicionais e quantidade. O resumo e o total são recalculados a cada alteração, sem recarregar a página. O tamanho define o máximo de sabores, e o site impede e avisa quando o limite é ultrapassado.
 - **Formulário de contato com validação** em JavaScript, com mensagens de erro junto a cada campo. O que o usuário digitou é mantido quando há erro.
-- **Menu recolhível em telas pequenas**: botão "Menu" que abre e fecha a navegação (por clique ou tecla Esc).
 - **Layout responsivo**: as colunas viram uma só em telas de até 767 px.
 
 ## Tecnologias
@@ -51,7 +50,7 @@ bella-forno/
 ├── css/
 │   └── estilo.css            # único CSS, compartilhado por todas as páginas
 ├── js/
-│   ├── script.js             # compartilhado: "Aberto agora" e menu mobile
+│   ├── script.js             # compartilhado: "Aberto agora"
 │   ├── cardapio.js           # filtro e busca do cardápio
 │   ├── monte-pizza.js        # cálculo de preço e resumo do pedido
 │   └── contato.js            # validação do formulário de contato
@@ -94,7 +93,7 @@ As decisões visuais ficam como variáveis no `:root` do `css/estilo.css`, entã
 
 | Arquivo | Responsabilidade |
 |---|---|
-| `script.js` | `atualizarStatus()` define "Aberto agora" ou "Fechado agora" comparando a hora atual com `HORA_ABERTURA` (18) e `HORA_FECHAMENTO` (23). `iniciarMenuMobile()` abre e fecha o menu com o botão ou a tecla Esc. |
+| `script.js` | `atualizarStatus()` define "Aberto agora" ou "Fechado agora" comparando a hora atual com `HORA_ABERTURA` (18) e `HORA_FECHAMENTO` (23). |
 | `cardapio.js` | `aplicarFiltros()` mostra ou esconde cada cartão conforme a categoria ativa (`data-categoria`) e o texto da busca (`data-nome`). `normalizar()` remove acentos e maiúsculas. |
 | `monte-pizza.js` | Calcula o total, monta o resumo, limita os sabores pelo tamanho e valida o envio. Usa um único ouvinte de `change` no formulário (delegação de eventos). |
 | `contato.js` | Valida cada campo ao sair dele (`blur`) e todos no envio, mostra os erros junto aos campos e confirma o envio com o primeiro nome do cliente. |
@@ -141,7 +140,7 @@ O formulário usa o atributo `novalidate` para desligar as bolhas de erro do nav
 
 - Tags semânticas e um único `h1` por página
 - Link da página atual marcado com `aria-current="page"`
-- Botões de filtro com `aria-pressed` e botão do menu com `aria-expanded` e `aria-controls`
+- Botões de filtro com `aria-pressed`
 - Campos de formulário com `label` visível, erros ligados por `aria-describedby` e `aria-invalid` nos campos com problema
 - Avisos e confirmações com `role="status"`
 - Contorno de foco visível (`:focus-visible`) para navegação por teclado

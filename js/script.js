@@ -21,30 +21,3 @@ function atualizarStatus() {
 }
 
 atualizarStatus();
-
-function iniciarMenuMobile() {
-  const botaoMenu = document.querySelector(".menu-toggle");
-  const menuPrincipal = document.getElementById("menu-principal");
-
-  if (botaoMenu === null || menuPrincipal === null) {
-    return;
-  }
-
-  function alternarMenu() {
-    const aberto = menuPrincipal.classList.toggle("aberto");
-
-    botaoMenu.setAttribute("aria-expanded", String(aberto));
-    botaoMenu.textContent = aberto ? "Fechar" : "Menu";
-  }
-
-  botaoMenu.addEventListener("click", alternarMenu);
-
-  document.addEventListener("keydown", function (evento) {
-    if (evento.key === "Escape" && menuPrincipal.classList.contains("aberto")) {
-      alternarMenu();
-      botaoMenu.focus();
-    }
-  });
-}
-
-iniciarMenuMobile();
