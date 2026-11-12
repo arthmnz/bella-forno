@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato | Pizzaria</title>
+  <meta name="description" content="Pizzaria familiar com massa artesanal. Veja o cardápio e monte a sua pizza.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Bella Forno</a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html" aria-current="page">Contato</a></li>
+          <li><a href="monte-sua-pizza.html" class="menu-cta">Monte sua pizza</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1>Fale com a gente</h1>
+      <p class="section-lead">Dúvidas, reservas para grupos ou elogios: escreva e a gente responde.</p>
+
+      <div class="contato-layout">
+
+        <form id="form-contato" novalidate>
+
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required aria-describedby="erro-nome">
+            <p class="erro-campo" id="erro-nome"></p>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="erro-email">
+            <p class="erro-campo" id="erro-email"></p>
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone <span class="opcional">(opcional)</span></label>
+            <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(81) 91234-5678" aria-describedby="erro-telefone">
+            <p class="erro-campo" id="erro-telefone"></p>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required aria-describedby="erro-mensagem"></textarea>
+            <p class="erro-campo" id="erro-mensagem"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+          <p id="mensagem-sucesso-contato" class="mensagem-sucesso" role="status" hidden></p>
+        </form>
+
+        <aside class="info-card">
+          <h3>Horário</h3>
+          <p>Todos os dias, das 18h às 23h</p>
+          <h3>Endereço</h3>
+          <p>Rua Exemplo, 123<br>Recife, PE</p>
+          <h3>Reservas</h3>
+          <p>Para grupos de 8 pessoas ou mais, mande a data e o número de convidados.</p>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+  <script src="js/script.js"></script>
+  <script src="js/contato.js"></script>
+</body>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Bella Forno · Rua Ascendino Neves, 123 · Torre, Recife, PE</p>
+      <p>Aberto todos os dias, das 18h às 23h</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cardápio | Pizzaria</title>
+  <meta name="description" content="Pizzaria familiar com massa artesanal. Veja o cardápio e monte a sua pizza.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Bella Forno</a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cardapio.html" aria-current="page">Cardápio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="monte-sua-pizza.html" class="menu-cta">Monte sua pizza</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1>Cardápio</h1>
+      <p class="section-lead">Escolha por categoria ou procure pelo nome.</p>
+
+      <div class="cardapio-controles">
+        <div class="filtros" role="group" aria-label="Filtrar por categoria">
+          <button type="button" class="filtro ativo" data-filtro="todas" aria-pressed="true">Todas</button>
+          <button type="button" class="filtro" data-filtro="tradicionais" aria-pressed="false">Tradicionais</button>
+          <button type="button" class="filtro" data-filtro="especiais" aria-pressed="false">Especiais</button>
+          <button type="button" class="filtro" data-filtro="doces" aria-pressed="false">Doces</button>
+          <button type="button" class="filtro" data-filtro="bebidas" aria-pressed="false">Bebidas</button>
+          <button type="button" class="filtro" data-filtro="sobremesas" aria-pressed="false">Sobremesas</button>
+        </div>
+
+        <div class="busca">
+          <label for="busca">Buscar pelo nome</label>
+          <input type="search" id="busca" placeholder="Ex.: margherita">
+        </div>
+      </div>
+
+      <div class="cards-grid cards-grid-cardapio">
+
+        <article class="card" data-categoria="tradicionais" data-nome="Margherita">
+          <div class="card-media">
+            <img src="img/pizza-margherita.jpg" alt="Pizza margherita com manjericão fresco">
+            <span class="badge">Mais pedida</span>
+          </div>
+          <div class="card-body">
+            <h3>Margherita</h3>
+            <p class="card-text">Molho de tomate caseiro, muçarela de búfala e manjericão fresco.</p>
+            <p class="card-price">a partir de R$ 38,00</p>
+            <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="bebidas" data-nome="Refrigerante 2L">
+          <div class="card-media">
+            <img src="img/refri.jpg" alt="Garrafa de refrigerante bem gelada">
+          </div>
+          <div class="card-body">
+            <h3>Refrigerante 2L</h3>
+            <p class="card-text">Guaraná, cola ou limão, bem gelado.</p>
+            <p class="card-price">R$ 14,00</p>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="tradicionais" data-nome="Calabresa da Casa">
+  <div class="card-media">
+    <img src="img/pizza-calabresa.jpg" alt="Pizza de calabresa com muçarela derretida">
+  </div>
+  <div class="card-body">
+    <h3>Calabresa da Casa</h3>
+    <p class="card-text">Calabresa artesanal fatiada na hora, muçarela e orégano.</p>
+    <p class="card-price">a partir de R$ 38,00</p>
+    <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+  </div>
+</article>
+
+<article class="card" data-categoria="tradicionais" data-nome="Portuguesa">
+  <div class="card-media">
+    <img src="img/pizza-portuguesa.jpg" alt="Pizza portuguesa">
+  </div>
+  <div class="card-body">
+    <h3>Portuguesa</h3>
+    <p class="card-text">Presunto, ovo, cebola, azeitona e muçarela.</p>
+    <p class="card-price">a partir de R$ 38,00</p>
+    <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+  </div>
+</article>
+
+<article class="card" data-categoria="especiais" data-nome="Quatro Queijos">
+  <div class="card-media">
+    <img src="img/pizza-quatro-queijos.jpg" alt="Pizza quatro queijos">
+    <span class="badge">Nova</span>
+  </div>
+  <div class="card-body">
+    <h3>Quatro Queijos</h3>
+    <p class="card-text">Muçarela, provolone, parmesão e gorgonzola sobre massa fina.</p>
+    <p class="card-price">a partir de R$ 44,00</p>
+    <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+  </div>
+</article>
+
+<article class="card" data-categoria="especiais" data-nome="Frango com Catupiry">
+  <div class="card-media">
+    <img src="img/frango-catupiry.jpg" alt="Pizza de frango com catupiry">
+  </div>
+  <div class="card-body">
+    <h3>Frango com Catupiry</h3>
+    <p class="card-text">Frango desfiado, catupiry e milho.</p>
+    <p class="card-price">a partir de R$ 44,00</p>
+    <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+  </div>
+</article>
+
+<article class="card" data-categoria="tradicionais" data-nome="muçarela">
+  <div class="card-media">
+    <img src="img/mussarela.jpg" alt="Pizza de Muçarela">
+  </div>
+  <div class="card-body">
+    <h3>muçarela</h3>
+    <p class="card-text">Muçarela cremosa sobre molho de tomate caseiro e orégano. A simples que todo mundo pede.</p>
+    <p class="card-price">a partir de R$ 38,00</p>
+    <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+  </div>
+</article>
+
+<article class="card" data-categoria="doces" data-nome="Chocolate com Morango">
+  <div class="card-media">
+    <img src="img/chocolate-morango.jpg" alt="Pizza doce de chocolate com morango">
+  </div>
+  <div class="card-body">
+    <h3>Chocolate com Morango</h3>
+    <p class="card-text">Chocolate ao leite derretido e morangos frescos.</p>
+    <p class="card-price">a partir de R$ 44,00</p>
+    <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+  </div>
+</article>
+
+      </div>
+
+      <p id="sem-resultados" class="sem-resultados" hidden>
+        Nenhum item encontrado. Tente outra busca ou categoria.
+      </p>
+    </div>
+  </section>
+</main>
+
+<script src="js/script.js"></script>
+<script src="js/cardapio.js"></script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Bella Forno Rua Ascendino Neves, 123 · Torre, Recife, PE</p>
+      <p>Aberto todos os dias, das 18h às 23h</p>
+    </div>
+  </footer>
+
+</body>
+</html>

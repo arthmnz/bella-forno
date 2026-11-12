@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bella Forno | Pizzaria</title>
+  <meta name="description" content="Pizzaria familiar com massa artesanal. Veja o cardápio e monte a sua pizza.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Bella Forno</a>
+
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+
+
+    <nav id="menu-principal" class="nav" aria-label="Navegação principal">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="monte-sua-pizza.html" class="menu-cta">Monte sua pizza</a></li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+
+      <div class="hero-text">
+        <h1>O forno já está aceso.</h1>
+        <p class="hero-lead">
+          Massa feita todo dia, receita da nona e mesa grande para a família toda.
+        </p>
+        <div class="hero-actions">
+          <a href="cardapio.html" class="btn btn-primary">Ver cardápio</a>
+          <a href="monte-sua-pizza.html" class="btn btn-secondary">Monte sua pizza</a>
+        </div>
+      </div>
+
+      <img src="img/hero-pizza.jpg" alt="Pizza artesanal recém-saída do forno" class="hero-image">
+
+    </div>
+  </section>
+  <section class="section">
+  <div class="container">
+    <h2>As favoritas da casa</h2>
+    <p class="section-lead">Os sabores que a família pede de novo e de novo.</p>
+
+    <div class="cards-grid">
+
+      <article class="card">
+        <div class="card-media">
+          <img src="img/pizza-margherita.jpg" alt="Pizza margherita com manjericão fresco">
+          <span class="badge">Mais pedida</span>
+        </div>
+        <div class="card-body">
+          <h3>Margherita</h3>
+          <p class="card-text">Molho de tomate caseiro, muçarela de búfala e manjericão fresco.</p>
+          <p class="card-price">a partir de R$ 38,00</p>
+          <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="img/pizza-calabresa.jpg" alt="Pizza de calabresa com cebola">
+        </div>
+        <div class="card-body">
+          <h3>Calabresa da Casa</h3>
+          <p class="card-text">Calabresa artesanal fatiada na hora, muçarela e orégano.</p>
+          <p class="card-price">a partir de R$ 38,00</p>
+          <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <img src="img/pizza-quatro-queijos.jpg" alt="Pizza quatro queijos">
+          <span class="badge">Nova</span>
+        </div>
+        <div class="card-body">
+          <h3>Quatro Queijos</h3>
+          <p class="card-text">Muçarela, provolone, parmesão e gorgonzola sobre massa fina.</p>
+          <p class="card-price">a partir de R$ 44,00</p>
+          <a href="monte-sua-pizza.html" class="btn btn-secondary">Personalizar</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container info-grid">
+
+    <div>
+      <h2>Venha nos visitar</h2>
+      <p id="status-aberto" class="status">Verificando horário...</p>
+      <p class="section-lead">Mesa grande, forno aceso e lugar para a família toda.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Horário</h3>
+      <p>Todos os dias, das 18h às 23h</p>
+      <h3>Endereço</h3>
+      <p>Rua Ascendino Neves, 123<br>Recife, PE</p>
+    </div>
+
+  </div>
+</section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Bella Forno · Rua Ascendino Neves, 123 · Torre, Recife, PE</p>
+      <p>Aberto todos os dias, das 18h às 23h</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</body>
+</html>

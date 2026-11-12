@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monte Sua Pizza | Pizzaria</title>
+  <meta name="description" content="Pizzaria familiar com massa artesanal. Veja o cardápio e monte a sua pizza.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Bella Forno</a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="monte-sua-pizza.html" class="menu-cta" aria-current="page">Monte sua pizza</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1>Monte sua pizza</h1>
+      <p class="section-lead">Escolha o tamanho, os sabores e os extras. O preço atualiza na hora.</p>
+
+      <form id="form-pizza" class="monte-layout">
+
+        <div class="monte-opcoes">
+
+          <fieldset class="grupo">
+            <legend>1. Tamanho</legend>
+            <div class="opcoes">
+              <label class="opcao">
+                <input type="radio" name="tamanho" value="Broto" data-preco="38" data-max="1" checked>
+                <span class="opcao-nome">Broto</span>
+                <span class="opcao-info">1 sabor</span>
+                <span class="opcao-preco">R$ 38,00</span>
+              </label>
+              <label class="opcao">
+                <input type="radio" name="tamanho" value="Média" data-preco="52" data-max="2">
+                <span class="opcao-nome">Média</span>
+                <span class="opcao-info">até 2 sabores</span>
+                <span class="opcao-preco">R$ 52,00</span>
+              </label>
+              <label class="opcao">
+                <input type="radio" name="tamanho" value="Grande" data-preco="66" data-max="2">
+                <span class="opcao-nome">Grande</span>
+                <span class="opcao-info">até 2 sabores</span>
+                <span class="opcao-preco">R$ 66,00</span>
+              </label>
+              <label class="opcao">
+                <input type="radio" name="tamanho" value="Família" data-preco="82" data-max="3">
+                <span class="opcao-nome">Família</span>
+                <span class="opcao-info">até 3 sabores</span>
+                <span class="opcao-preco">R$ 82,00</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <legend>2. Sabores</legend>
+            <p class="grupo-dica" id="dica-sabores">Escolha até 1 sabor.</p>
+            <p class="aviso" id="aviso-sabores" role="status"></p>
+            <div class="opcoes opcoes-duas">
+              <label class="opcao">
+                <input type="checkbox" name="sabor" value="Margherita" data-preco="0">
+                <span class="opcao-nome">Margherita</span>
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="sabor" value="Muçarela" data-preco="0">
+                <span class="opcao-nome">Muçarela</span>
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="sabor" value="Calabresa da Casa" data-preco="0">
+                <span class="opcao-nome">Calabresa da Casa</span>
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="sabor" value="Portuguesa" data-preco="0">
+                <span class="opcao-nome">Portuguesa</span>
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="sabor" value="Quatro Queijos" data-preco="6">
+                <span class="opcao-nome">Quatro Queijos</span>
+                <span class="opcao-preco">+ R$ 6,00</span>
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="sabor" value="Frango com Catupiry" data-preco="6">
+                <span class="opcao-nome">Frango com Catupiry</span>
+                <span class="opcao-preco">+ R$ 6,00</span>
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="sabor" value="Carne de Sol" data-preco="6">
+                <span class="opcao-nome">Carne de Sol</span>
+                <span class="opcao-preco">+ R$ 6,00</span>
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="sabor" value="Chocolate com Morango" data-preco="6">
+                <span class="opcao-nome">Chocolate com Morango</span>
+                <span class="opcao-preco">+ R$ 6,00</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <legend>3. Borda</legend>
+            <div class="opcoes">
+              <label class="opcao">
+                <input type="radio" name="borda" value="Sem recheio" data-preco="0" checked>
+                <span class="opcao-nome">Sem recheio</span>
+              </label>
+              <label class="opcao">
+                <input type="radio" name="borda" value="Borda de catupiry" data-preco="8">
+                <span class="opcao-nome">Recheada com catupiry</span>
+                <span class="opcao-preco">+ R$ 8,00</span>
+              </label>
+              <label class="opcao">
+                <input type="radio" name="borda" value="Borda de cheddar" data-preco="8">
+                <span class="opcao-nome">Recheada com cheddar</span>
+                <span class="opcao-preco">+ R$ 8,00</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <legend>4. Adicionais</legend>
+            <div class="opcoes">
+              <label class="opcao">
+                <input type="checkbox" name="adicional" value="Queijo extra" data-preco="5">
+                <span class="opcao-nome">Queijo extra</span>
+                <span class="opcao-preco">+ R$ 5,00</span>
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="adicional" value="Bacon" data-preco="5">
+                <span class="opcao-nome">Bacon</span>
+                <span class="opcao-preco">+ R$ 5,00</span>
+              </label>
+              <label class="opcao">
+                <input type="checkbox" name="adicional" value="Azeitona" data-preco="5">
+                <span class="opcao-nome">Azeitona</span>
+                <span class="opcao-preco">+ R$ 5,00</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="grupo campo-quantidade">
+            <label for="quantidade" class="grupo-titulo">5. Quantidade</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" max="10" value="1">
+          </div>
+
+        </div>
+
+        <aside class="resumo" aria-labelledby="titulo-resumo">
+          <h2 id="titulo-resumo">Seu pedido</h2>
+          <ul id="resumo-lista" class="resumo-lista"></ul>
+          <p class="resumo-total">
+            <span>Total</span>
+            <strong id="resumo-total">R$ 0,00</strong>
+          </p>
+          <button type="submit" class="btn btn-primary">Confirmar pedido</button>
+          <p id="mensagem-sucesso" class="mensagem-sucesso" role="status" hidden></p>
+        </aside>
+
+      </form>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Bella Forno · Rua Ascendino Neves, 123 · Torre, Recife, PE</p>
+      <p>Aberto todos os dias, das 18h às 23h</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+  <script src="js/monte-pizza.js"></script>
+</body>
+</body>
+</html>
